@@ -1,18 +1,31 @@
 [project]
 name = "cloud-office-ml"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Customer churn prediction API using machine learning on Google Cloud Platform"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "fsspec>=2025.9.0",
-    "gcsfs>=2025.9.0",
-    "google-cloud-aiplatform<1.122.0",
-    "google-cloud-storage>=2.19.0",
-    "joblib>=1.5.2",
+    # Core ML and data processing
     "numpy>=2.3.4",
     "pandas>=2.3.3",
     "scikit-learn>=1.7.2",
+    "joblib>=1.5.2",
+    
+    # Web framework and API
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+    
+    # Google Cloud Platform
+    "google-cloud-storage>=2.19.0",
+    "google-cloud-aiplatform>=1.122.0",
+    
+    # File system and data access
+    "fsspec>=2025.9.0",
+    "gcsfs>=2025.9.0",
+    
+    # HTTP client for testing
+    "requests>=2.31.0",
 ]
 
 [dependency-groups]
